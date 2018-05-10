@@ -3,29 +3,65 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorV2Primary</item>
+        <item name="colorPrimaryDark">@color/colorV2PrimaryDark</item>
+        <item name="colorAccent">@color/colorV2Accent</item>
     </style>
 
     <style name="DayText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">2dp</item>
-        <item name="android:layout_marginEnd">2dp</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">#BDBDBD</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/day_border</item>
+    </style>
+
+    <style name="DayTextLand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/day_border_land</item>
     </style>
 
     <style name="NumberText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">8sp</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#BBDEFB</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/number_border</item>
+    </style>
+
+    <style name="NumberTextLand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#BBDEFB</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/number_border</item>
+    </style>
+
+    <style name="TextFab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@drawable/fab_border</item>
     </style>
 
 </resources>

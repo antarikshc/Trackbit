@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    //custom accents
+    <color name="colorV2Primary">#03A9F4</color>
+    <color name="colorV2PrimaryDark">#01579B</color>
+    <color name="colorV2Accent">#FF4081</color>
+
+    //values for number of habits
+    <color name="day0">#BBDEFB</color>
+    <color name="num0">#E3F2FD</color>
+
+    <color name="day12">#0277BD</color>
+    <color name="num12">#03A9F4</color>
+
+    <color name="day345">#558B2F</color>
+    <color name="num345">#8bc34a</color>
+
+    <color name="day678">#2E7D32</color>
+    <color name="num678">#4CAF50</color>
+
 </resources>

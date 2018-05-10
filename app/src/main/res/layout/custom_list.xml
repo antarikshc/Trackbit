@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="8dp"
+    android:paddingBottom="10dp"
     android:paddingTop="8dp">
 
     <TextView
@@ -12,7 +12,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
-        android:text="Habit Name"
         android:textColor="#616161"
         android:textSize="18sp" />
 
@@ -24,114 +23,93 @@
         android:paddingStart="1dp">
 
         <TextView
+            android:id="@+id/sunday_number"
+            style="@style/NumberText" />
+
+        <TextView
+            android:id="@+id/monday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/sunday_number" />
+
+        <TextView
+            android:id="@+id/tuesday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/monday_number" />
+
+        <TextView
+            android:id="@+id/wednesday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tuesday_number" />
+
+        <TextView
+            android:id="@+id/thursday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/wednesday_number" />
+
+        <TextView
+            android:id="@+id/friday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/thursday_number" />
+
+        <TextView
+            android:id="@+id/saturday_number"
+            style="@style/NumberText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/friday_number" />
+
+        <TextView
             android:id="@+id/text_sunday"
             style="@style/DayText"
-            android:paddingEnd="11dp"
-            android:paddingStart="11dp"
+            android:layout_alignBottom="@id/sunday_number"
+            android:layout_alignEnd="@id/sunday_number"
             android:text="@string/sunday" />
 
         <TextView
             android:id="@+id/text_monday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_sunday"
-            android:paddingEnd="11dp"
-            android:paddingStart="11dp"
+            android:layout_alignBottom="@id/monday_number"
+            android:layout_alignEnd="@id/monday_number"
             android:text="@string/monday" />
 
         <TextView
             android:id="@+id/text_tuesday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_monday"
-            android:paddingEnd="13dp"
-            android:paddingStart="13dp"
+            android:layout_alignBottom="@id/tuesday_number"
+            android:layout_alignEnd="@id/tuesday_number"
             android:text="@string/tuesday" />
 
         <TextView
             android:id="@+id/text_wednesday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_tuesday"
-            android:paddingEnd="11dp"
-            android:paddingStart="11dp"
+            android:layout_alignBottom="@id/wednesday_number"
+            android:layout_alignEnd="@id/wednesday_number"
             android:text="@string/wednesday" />
 
         <TextView
             android:id="@+id/text_thursday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_wednesday"
-            android:paddingEnd="11dp"
-            android:paddingStart="11dp"
+            android:layout_alignBottom="@id/thursday_number"
+            android:layout_alignEnd="@id/thursday_number"
             android:text="@string/thursday" />
 
         <TextView
             android:id="@+id/text_friday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_thursday"
-            android:paddingEnd="14dp"
-            android:paddingStart="14dp"
+            android:layout_alignBottom="@id/friday_number"
+            android:layout_alignEnd="@id/friday_number"
             android:text="@string/friday" />
 
         <TextView
             android:id="@+id/text_saturday"
             style="@style/DayText"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/text_friday"
-            android:paddingEnd="11dp"
-            android:paddingStart="11dp"
+            android:layout_alignBottom="@id/saturday_number"
+            android:layout_alignEnd="@id/saturday_number"
             android:text="@string/saturday" />
-
-        <TextView
-            android:id="@+id/sunday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_sunday"
-            android:layout_alignEnd="@id/text_sunday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/monday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_monday"
-            android:layout_alignEnd="@id/text_monday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/tuesday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_tuesday"
-            android:layout_alignEnd="@id/text_tuesday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/wednesday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_wednesday"
-            android:layout_alignEnd="@id/text_wednesday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/thursday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_thursday"
-            android:layout_alignEnd="@id/text_thursday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/friday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_friday"
-            android:layout_alignEnd="@id/text_friday"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/saturday_number"
-            style="@style/NumberText"
-            android:layout_alignBottom="@id/text_saturday"
-            android:layout_alignEnd="@id/text_saturday"
-            android:text="1" />
 
     </RelativeLayout>
 

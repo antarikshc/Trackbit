@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HabitActivity"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    android:paddingStart="@dimen/default_material_margin"
+    android:paddingEnd="@dimen/default_material_margin">
 
     <ListView
         android:id="@+id/habit_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/habit_list"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/default_material_margin"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_fab_icon_24px" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_default"
+        android:layout_alignEnd="@+id/habit_list"
+        android:layout_marginBottom="@dimen/long_material_margin"
+        android:layout_marginEnd="9dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_fab_add_24px" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_add"
+        android:layout_alignStart="@+id/fab_add"
+        android:layout_marginBottom="@dimen/long_material_margin"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_fab_delete_24px" />
+
+    <TextView
+        android:id="@+id/text_add"
+        style="@style/TextFab"
+        android:layout_alignBottom="@+id/fab_add"
+        android:layout_toStartOf="@+id/fab_add"
+        android:text="@string/add_habit" />
+
+    <TextView
+        android:id="@+id/text_delete"
+        style="@style/TextFab"
+        android:layout_alignBottom="@+id/fab_delete"
+        android:layout_toStartOf="@+id/fab_add"
+        android:text="@string/delete_all" />
+
 </RelativeLayout>
