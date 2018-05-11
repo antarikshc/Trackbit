@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_material_margin"
+    tools:context=".data.EditorActivity">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/habit_name" />
+
+    <EditText
+        android:id="@+id/edit_habit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_name"
+        android:layout_marginBottom="@dimen/default_material_margin"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_habit_name"
+        android:orientation="horizontal"
+        android:padding="@dimen/default_material_margin">
+
+        <ImageView
+            android:id="@+id/btn_subtract"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:onClick="decrement"
+            app:srcCompat="@drawable/ic_button_subtract" />
+
+        <EditText
+            android:id="@+id/habit_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:onClick="increment"
+            app:srcCompat="@drawable/ic_button_add" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_delete_habit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_save"
+        android:layout_alignEnd="@+id/fab_save"
+        android:layout_marginBottom="@dimen/long_material_margin"
+        android:layout_marginEnd="9dp"
+        android:visibility="gone"
+        android:onClick="deleteHabit"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_fab_delete_24px" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="insertPet"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_save" />
+
+</RelativeLayout>

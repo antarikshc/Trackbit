@@ -131,6 +131,7 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
                         //adjust UI padding if number of habits is 2 digit and orientation is portrait
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numSunday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numSunday.setText(String.valueOf(records[i]));
 
                         break;
@@ -142,8 +143,10 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
                         viewHolder.numMonday.setBackgroundColor(numColor);
                         viewHolder.numMonday.setTextColor(numTextColor);
 
+                        //adjust UI padding if number of habits is 2 digit and orientation is portrait
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numMonday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numMonday.setText(String.valueOf(records[i]));
 
                         break;
@@ -155,8 +158,10 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
                         viewHolder.numTueday.setBackgroundColor(numColor);
                         viewHolder.numTueday.setTextColor(numTextColor);
 
+                        //adjust UI padding if number of habits is 2 digit and orientation is portrait
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numTueday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numTueday.setText(String.valueOf(records[i]));
 
                         break;
@@ -170,6 +175,7 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
 
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numWednesday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numWednesday.setText(String.valueOf(records[i]));
 
                         break;
@@ -183,6 +189,7 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
 
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numThursday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numThursday.setText(String.valueOf(records[i]));
 
                         break;
@@ -194,8 +201,10 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
                         viewHolder.numFriday.setBackgroundColor(numColor);
                         viewHolder.numFriday.setTextColor(numTextColor);
 
+                        //adjust UI padding if number of habits is 2 digit and orientation is portrait
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numFriday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numFriday.setText(String.valueOf(records[i]));
 
                         break;
@@ -207,8 +216,10 @@ public class CustomAdapter extends ArrayAdapter<HabitData> {
                         viewHolder.numSaturday.setBackgroundColor(numColor);
                         viewHolder.numSaturday.setTextColor(numTextColor);
 
+                        //adjust UI padding if number of habits is 2 digit and orientation is portrait
                         if (records[i] > 10 && getContext().getResources().getConfiguration().orientation == 1)
                             viewHolder.numSaturday.setPadding(30, 26, 30, 26);
+
                         viewHolder.numSaturday.setText(String.valueOf(records[i]));
 
                         break;

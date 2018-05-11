@@ -9,4 +9,7 @@
     <string name="saturday">SAT</string>
     <string name="add_habit">Add Habit</string>
     <string name="delete_all">Delete All</string>
+    <string name="habit_name">Habit Name</string>
+    <string name="insert_dummy_data">Insert dummy data</string>
+    <string name="clear_habit_records">Clear habit records</string>
 </resources>

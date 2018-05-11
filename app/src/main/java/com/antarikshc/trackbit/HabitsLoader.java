@@ -1,7 +1,6 @@
 package com.antarikshc.trackbit;
 
 import android.content.AsyncTaskLoader;
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 
 public class HabitsLoader extends AsyncTaskLoader<ArrayList<HabitData>> {
 
-    //to create PetDbHelper instance
+    //to create HabitDbHelper instance
     private HabitDbHelper mDbHelper;
 
     HabitsLoader(Context mContext) {
@@ -36,36 +35,10 @@ public class HabitsLoader extends AsyncTaskLoader<ArrayList<HabitData>> {
         mDbHelper = new HabitDbHelper(getContext());
         Cursor cursor = null;
 
+        // Create and/or open a database to write to it
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
         try {
-            // Create and/or open a database to read from it
-            SQLiteDatabase db = mDbHelper.getWritableDatabase();
-
-            db.execSQL("DELETE FROM " + HabitEntry.TABLE_NAME);
-
-            /** Dummy data for testing layout **/
-            ContentValues values = new ContentValues();
-            values.put(HabitEntry.COLUMN_HABIT_NAME, "Make Java great");
-            values.put(HabitEntry.COLUMN_SUNDAY, 3);
-            values.put(HabitEntry.COLUMN_MONDAY, 0);
-            values.put(HabitEntry.COLUMN_TUESDAY, 2);
-            //values.put(HabitEntry.COLUMN_WEDNESDAY, 3);
-            values.put(HabitEntry.COLUMN_THURSDAY, 3);
-            values.put(HabitEntry.COLUMN_FRIDAY, 0);
-            values.put(HabitEntry.COLUMN_SATURDAY, 12);
-            db.insert(HabitEntry.TABLE_NAME, null, values);
-
-            /** Dummy data for testing layout **/
-            ContentValues values1 = new ContentValues();
-            values1.put(HabitEntry.COLUMN_HABIT_NAME, "Practice Kotlin for no reason");
-            values1.put(HabitEntry.COLUMN_SUNDAY, 1);
-            values1.put(HabitEntry.COLUMN_MONDAY, 1);
-            values1.put(HabitEntry.COLUMN_TUESDAY, 3);
-            values.put(HabitEntry.COLUMN_WEDNESDAY, 5);
-            values1.put(HabitEntry.COLUMN_THURSDAY, 8);
-            //values1.put(HabitEntry.COLUMN_FRIDAY, 0);
-            values1.put(HabitEntry.COLUMN_SATURDAY, 14);
-            db.insert(HabitEntry.TABLE_NAME, null, values1);
-
             // to get a Cursor that contains all rows from the pets table.
             cursor = db.query(HabitEntry.TABLE_NAME,
                     null,
@@ -89,15 +62,17 @@ public class HabitsLoader extends AsyncTaskLoader<ArrayList<HabitData>> {
             while (cursor.moveToNext()) {
 
                 String name;
+                Integer id;
                 //Initialize records array to prevent null values in columns
                 Integer[] records = {0, 0, 0, 0, 0, 0, 0};
 
+                id = cursor.getInt(0);
                 name = cursor.getString(1);
                 for (int i = 0; i <= 6; i++) {
                     records[i] = cursor.getInt(cursor.getColumnIndex(columnNames[i]));
                 }
 
-                habits.add(new HabitData(name, records));
+                habits.add(new HabitData(id, name, records));
 
             }
 
@@ -105,6 +80,7 @@ public class HabitsLoader extends AsyncTaskLoader<ArrayList<HabitData>> {
 
         } finally {
             cursor.close();
+            db.close();
         }
     }
 }

@@ -23,8 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/habit_list"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="@dimen/default_material_margin"
         android:clickable="true"
+        android:focusable="true"
         app:fabSize="normal"
         app:srcCompat="@drawable/ic_fab_icon_24px" />
 
@@ -35,7 +37,8 @@
         android:layout_above="@+id/fab_default"
         android:layout_alignEnd="@+id/habit_list"
         android:layout_marginBottom="@dimen/long_material_margin"
-        android:layout_marginEnd="9dp"
+        android:layout_marginEnd="11dp"
+        android:onClick="addHabit"
         app:backgroundTint="@color/colorPrimary"
         app:fabSize="mini"
         app:srcCompat="@drawable/ic_fab_add_24px" />
@@ -47,6 +50,7 @@
         android:layout_above="@+id/fab_add"
         android:layout_alignStart="@+id/fab_add"
         android:layout_marginBottom="@dimen/long_material_margin"
+        android:onClick="deleteAll"
         app:backgroundTint="@android:color/holo_red_light"
         app:fabSize="mini"
         app:srcCompat="@drawable/ic_fab_delete_24px" />
