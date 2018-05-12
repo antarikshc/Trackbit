@@ -58,15 +58,17 @@
     <TextView
         android:id="@+id/text_add"
         style="@style/TextFab"
-        android:layout_alignBottom="@+id/fab_add"
-        android:layout_toStartOf="@+id/fab_add"
+        android:layout_alignTop="@+id/fab_add"
+        android:layout_toStartOf="@+id/fab_default"
+        android:layout_marginTop="8dp"
         android:text="@string/add_habit" />
 
     <TextView
         android:id="@+id/text_delete"
         style="@style/TextFab"
-        android:layout_alignBottom="@+id/fab_delete"
-        android:layout_toStartOf="@+id/fab_add"
+        android:layout_alignTop="@+id/fab_delete"
+        android:layout_toStartOf="@+id/fab_default"
+        android:layout_marginTop="8dp"
         android:text="@string/delete_all" />
 
 </RelativeLayout>

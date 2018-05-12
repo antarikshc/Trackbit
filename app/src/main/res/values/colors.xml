@@ -9,6 +9,8 @@
     <color name="colorV2PrimaryDark">#01579B</color>
     <color name="colorV2Accent">#FF4081</color>
 
+    <color name="mainTextColor">#616161</color>
+
     //values for number of habits
     <color name="day0">#BBDEFB</color>
     <color name="num0">#E3F2FD</color>
