@@ -22,7 +22,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.antarikshc.trackbit.data.EditorActivity;
 import com.antarikshc.trackbit.data.HabitContract.HabitEntry;
 import com.antarikshc.trackbit.data.HabitDbHelper;
 
@@ -232,7 +231,6 @@ public class HabitActivity extends AppCompatActivity implements LoaderManager.Lo
     public void onLoaderReset(Loader<ArrayList<HabitData>> loader) {
         customAdapter.clear();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

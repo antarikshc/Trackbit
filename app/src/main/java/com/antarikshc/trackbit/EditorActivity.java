@@ -1,4 +1,4 @@
-package com.antarikshc.trackbit.data;
+package com.antarikshc.trackbit;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.antarikshc.trackbit.R;
 import com.antarikshc.trackbit.data.HabitContract.HabitEntry;
+import com.antarikshc.trackbit.data.HabitDbHelper;
 
 import java.util.Calendar;
 
@@ -83,6 +83,7 @@ public class EditorActivity extends AppCompatActivity {
             if (intent.getBooleanExtra("dataPresent", true)) {
 
                 ContentValues values = new ContentValues();
+                values.put(HabitEntry.COLUMN_HABIT_NAME, habitName.getText().toString());
                 values.put(columnNames[currentDay - 1], Integer.parseInt(habitNumber.getText().toString()));
 
                 db.update(HabitEntry.TABLE_NAME,
@@ -94,11 +95,15 @@ public class EditorActivity extends AppCompatActivity {
 
                 if (habitName.getText().length() > 0 && !habitName.getText().toString().isEmpty()) {
 
+
                     //Initialize records array to prevent null values in columns
                     Integer[] records = {0, 0, 0, 0, 0, 0, 0};
 
-                    //get the input from user and update the array
-                    records[currentDay - 1] = Integer.parseInt(habitNumber.getText().toString());
+                    if (habitNumber.getText().length() > 0 && !habitNumber.getText().toString().isEmpty()) {
+                        //get the input from user and update the array
+                        records[currentDay - 1] = Integer.parseInt(habitNumber.getText().toString());
+
+                    }
 
                     ContentValues values = new ContentValues();
                     values.put(HabitEntry.COLUMN_HABIT_NAME, habitName.getText().toString());
